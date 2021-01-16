@@ -6,6 +6,8 @@ For some reason, we need to use SendGrid V3 in SailJS &lt; 1.0.x
 
 This module is a transport plugin for [Nodemailer](https://github.com/andris9/Nodemailer) that makes it possible to send through [SendGrid's V3 Web API](https://sendgrid.com/docs/api-reference/)!
 
+[![npm version](https://badge.fury.io/js/%40danfebooks%2Fnodemailer-sendgrid-transport.svg)](https://badge.fury.io/js/%40danfebooks%2Fnodemailer-sendgrid-transport)
+
 ## Usage
 Install via npm.
 
