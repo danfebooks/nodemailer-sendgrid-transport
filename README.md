@@ -1,26 +1,21 @@
-**IMPORTANT ANNOUNCEMENT**
+**Why**
 
-**As of June 1, 2016, SendGrid will no longer support this library.**
-
-Please direct any questions to the [Developer Experience](mailto:dx@sendgrid.com) team.
+For some reason, we need to use SendGrid V3 in SailJS &lt; 1.0.x
 
 # nodemailer-sendgrid-transport
 
-This module is a transport plugin for [Nodemailer](https://github.com/andris9/Nodemailer) that makes it possible to send through [SendGrid's Web API](https://sendgrid.com/docs/API_Reference/Web_API/mail.html)!
-
-[![BuildStatus](https://travis-ci.org/sendgrid/nodemailer-sendgrid-transport.svg?branch=master)](https://travis-ci.org/sendgrid/nodemailer-sendgrid-transport)
-[![NPM version](https://badge.fury.io/js/nodemailer-sendgrid-transport.svg)](http://badge.fury.io/js/nodemailer-sendgrid-transport)
+This module is a transport plugin for [Nodemailer](https://github.com/andris9/Nodemailer) that makes it possible to send through [SendGrid's V3 Web API](https://sendgrid.com/docs/api-reference/)!
 
 ## Usage
 Install via npm.
 
-	npm install nodemailer-sendgrid-transport
+	npm install @danfebooks/nodemailer-sendgrid-transport
 
 Require the module and initialize it with your SendGrid credentials.
 
 ```javascript
 var nodemailer = require('nodemailer');
-var sgTransport = require('nodemailer-sendgrid-transport');
+var sgTransport = require('@danfebooks/nodemailer-sendgrid-transport');
 
 // api key https://sendgrid.com/docs/Classroom/Send/api_keys.html
 var options = {
@@ -57,7 +52,7 @@ mailer.sendMail(email, function(err, res) {
 ## Deploying
 
 * Confirm tests pass
-* Bump the version in `README.md`, `package.json`, `test/sendgrid-transport-test.js`
+* Bump the version in `package.json`, `test/index.test.js`
 * Update `CHANGELOG.md`
 * Confirm tests pass
 * Commit `Version bump vX.X.X`

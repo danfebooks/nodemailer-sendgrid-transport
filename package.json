@@ -1,6 +1,6 @@
 {
-  "name": "nodemailer-sendgrid-transport",
-  "version": "0.3.2",
+  "name": "@danfebooks/nodemailer-sendgrid-transport",
+  "version": "0.3.3",
   "description": "SendGrid transport for Nodemailer",
   "main": "src/sendgrid-transport.js",
   "scripts": {
@@ -8,24 +8,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sendgrid/nodemailer-sendgrid-transport.git"
+    "url": "git://github.com/danfebooks/nodemailer-sendgrid-transport.git"
   },
   "keywords": [
     "Nodemailer",
     "SendGrid"
   ],
-  "author": "SendGrid <community@sendgrid.com> (sendgrid.com)",
+  "author": "DanfeBooks <community@danfebooks.com> (sendgrid.com)",
   "contributors": [
-    "Eddie Zaneski <eddiezane@sendgrid.com",
-    "Will Smidlein <ws@sendgrid.com>",
-    "Geoffroy Lesage <geoffroy@starchup.com>"
+    "Shekhar K. Sharma <itsmes.sh@gmail.com"
   ],
   "license": "MIT",
   "dependencies": {
-    "sendgrid": "git+https://github.com/glesage/sendgrid-nodejs.git"
+    "@sendgrid/mail": "7.4.2"
   },
   "devDependencies": {
-    "chai": "^1.9.1",
-    "mocha": "^1.20.1"
+    "chai": "4.2.0",
+    "mocha": "8.2.1"
   }
 }

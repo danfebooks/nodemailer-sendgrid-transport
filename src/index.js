@@ -1,6 +1,7 @@
 'use strict';
 
 var packageData = require('../package.json');
+var sendgrid = require('@sendgrid/mail');
 
 module.exports = function(options) {
   return new SendGridTransport(options);
@@ -13,15 +14,7 @@ function SendGridTransport(options) {
   this.name = 'SendGrid';
   this.version = packageData.version;
 
-  this.sendgrid = require('sendgrid')(this.options.auth.api_key);
-}
-
-// if in "name" <address@example.com> format, reformat to just address@example.com
-function trimReplyTo(a) {
-  if (a.indexOf('<') >= 0 && a.indexOf('>') > 0) {
-    return a.substring(a.indexOf('<') + 1, a.indexOf('>'));
-  }
-  return a;
+  this.sendgrid = sendgrid.setApiKey(this.options.auth.api_key);
 }
 
 SendGridTransport.prototype.send = function(mail, callback) {

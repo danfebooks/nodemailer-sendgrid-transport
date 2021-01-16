@@ -1,4 +1,4 @@
-var sgTransport = require('../src/sendgrid-transport.js');
+var sgTransport = require('../src/index.js');
 var expect = require('chai').expect;
 
 var pkg = require('../package.json');
@@ -9,7 +9,7 @@ describe('sendgrid-transport', function() {
   it('should take an apikey', function() {
     transport = sgTransport({
       'auth': {
-        api_key: 'test'
+        api_key: 'SG.test'
       }
     })
   });
