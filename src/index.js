@@ -108,9 +108,14 @@ SendGridTransport.prototype.send = function(mail, callback) {
     });
   }
 
-  this.sendgrid.API(this.sendgrid.emptyRequest({
-    method: 'POST',
-    path: '/v3/mail/send',
-    body: email,
-  }), callback);
+  this.sendgrid
+    .send(email)
+    .then(function(){
+      callback()
+    })
+    .catch(function(err) {
+      console.error('Error in ' + packageData.name)
+      console.error(err)
+    })
+
 };

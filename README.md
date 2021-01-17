@@ -11,9 +11,11 @@ This module is a transport plugin for [Nodemailer](https://github.com/andris9/No
 ## Usage
 Install via npm.
 
-	npm install @danfebooks/nodemailer-sendgrid-transport
+	npm install -S -E @danfebooks/nodemailer-sendgrid-transport
 
 Require the module and initialize it with your SendGrid credentials.
+
+**Recommended** to use with [@danfebooks/sails-service-mailer](https://github.com/danfebooks/sails-service-mailer)
 
 ```javascript
 var nodemailer = require('nodemailer');
@@ -29,7 +31,7 @@ var options = {
 var mailer = nodemailer.createTransport(sgTransport(options));
 ```
 
-Note: We suggest storing your SendGrid username and password as enviroment variables.
+Note: serve the API KEY using environment variables. 
 
 Create an email and send it off!
 
@@ -50,17 +52,5 @@ mailer.sendMail(email, function(err, res) {
 	console.log(res);
 });
 ```
-
-## Deploying
-
-* Confirm tests pass
-* Bump the version in `package.json`, `test/index.test.js`
-* Update `CHANGELOG.md`
-* Confirm tests pass
-* Commit `Version bump vX.X.X`
-* `npm publish`
-* Push changes to GitHub
-* Release tag on GitHub `vX.X.X`
-
-## License
-Licensed under the MIT License.
+## Need help?
+Please file an issue.
