@@ -108,14 +108,5 @@ SendGridTransport.prototype.send = function(mail, callback) {
     });
   }
 
-  this.sendgrid
-    .send(email)
-    .then(function(){
-      callback()
-    })
-    .catch(function(err) {
-      console.error('Error in ' + packageData.name)
-      console.error(err)
-    })
-
+  this.sendgrid.send(email, callback);
 };
